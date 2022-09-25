@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imgs/letterV.png" type="image/x-icon">
+    <title>Verbo</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="topPage">
+            <div class="divHowPlay">
+                <button class="howPlay">?</button>
+            </div>
+            <h1 class="title">Verbo</h1>
+                
+                
+            <div class="theme">
+                <span class="optionTheme t0">☀️</span>
+                <input class="chooseTheme" type="range" max="1" min="0" value="0">
+                <span class="optionTheme t1">🌙</span>
+            </div>
+        </nav>
+
+        <div class="error">
+            <p class="paragError">Somente palavras com 5 letras!</p>
+        </div>
+
+        <div class="attempts">
+
+            <div id="row0" class="row" data-numberRow="r0">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div>
+            <div id="row1" class="row" data-numberRow="r1">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div>
+            <div id="row2" class="row" data-numberRow="r2">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div>
+            <!-- <div id="row3" class="row" data-numberRow="r3">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div>
+            <div id="row4" class="row" data-numberRow="r4">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div> -->
+            <!-- <div id="row5" class="row" data-numberRow="r5">
+                <input type="text" class="letter" id="l0" maxlength="1" disabled>
+                <input type="text" class="letter" id="l1" maxlength="1" disabled>
+                <input type="text" class="letter" id="l2" maxlength="1" disabled>
+                <input type="text" class="letter" id="l3" maxlength="1" disabled>
+                <input type="text" class="letter" id="l4" maxlength="1" disabled>
+            </div> -->
+
+        </div>
+
+
+
+        <section class="keyboard">
+
+            <div class="keyboardRowOne">
+                <button class="letQ key">Q</button>
+                <button class="letW key">W</button>
+                <button class="letE key">E</button>
+                <button class="letR key">R</button>
+                <button class="letT key">T</button>
+                <button class="letY key">Y</button>
+                <button class="letU key">U</button>
+                <button class="letI key">I</button>
+                <button class="letO key">O</button>
+                <button class="letP key">P</button>
+            </div>
+
+            <div class="keyboardRowTwo">
+                <button class="letA key">A</button>
+                <button class="letS key">S</button>
+                <button class="letD key">D</button>
+                <button class="letF key">F</button>
+                <button class="letG key">G</button>
+                <button class="letH key">H</button>
+                <button class="letJ key">J</button>
+                <button class="letK key">K</button>
+                <button class="letL key">L</button>
+
+                <button class="deleteLetter key">⌦</button>
+            </div>
+
+            <div class="keyboardRowThree">
+                <button class="letZ key">Z</button>
+                <button class="letX key">X</button>
+                <button class="letC key">C</button>
+                <button class="letV key">V</button>
+                <button class="letB key">B</button>
+                <button class="letN key">N</button>
+                <button class="letM key">M</button>
+
+                <button class="enter key">Enter</button>
+            </div>
+
+        </section>
+
+        <aside class="howToPlay">
+
+            <div class="removeTutorial">
+                <span>X</span>
+            </div>
+
+            <div class="tutorial">
+                <p>Descubra a palavra certa em 5 tentativas, a cada tentativa é mostrado o quão perto da solução você está da solução</p>
+                <hr>
+
+                <div class="exampleone">
+                    <div class="wordExample">
+                        <div class="green">A</div><div>B</div><div>R</div><div>I</div><div>R</div>
+                    </div>
+                    <p>A letra <span class="green">A</span> faz parte da palavra e está na posição certa.</p>
+                </div>
+                <hr>
+
+                <div class="exampleTwo">
+                    <div class="wordExample">
+                        <div>S</div><div>O</div><div class="yellow">C</div><div>A</div><div>R</div>
+                    </div>
+                        <p>A letra <span class="yellow">C</span> faz parte da palavra mas está na posição incorreta.</p>
+                </div>
+                <hr>
+
+                <div class="exampleThree">
+                    <div class="wordExample">
+                        <div class="black">G</div><div>E</div><div>L</div><div>A</div><div>R</div>
+                    </div>
+                    <p>A letra <span class="black">G</span> não faz parte da palavra.</p>
+                </div>
+
+            </div>
+
+        </aside>
+        <!-- <span class="secret">secreta</span>!!! -->
+        <section class="endgame">
+                <h2>Fim de Jogo!!!</h2>
+                <p>Parabéns, você acertou a palavra  </p>
+            <div>
+                <button class="restart">Restart</button>
+            </div>
+        </section>
+        
+        <section class="gameOver">
+            <h2>Game Over!!!</h2>
+            <p class="correctWord"></p>
+            <p class="msgGameOver"></p>
+            <div>
+                <button class="restart">Restart</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./WordsJS/Words.js"></script>
+    <script src="./WordsJS/Verb.js"></script>
+    <script src="./game.js"></script>
+    <script src="./interface.js"></script>
+    <script src="./userOptions/keyboardMap.js"></script>
+    <script src="./userOptions/ThemeOptions.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    max-width: 63%;
+    margin: 0 auto;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topPage{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.topPage .title{
+    text-align: center;
+    width: 33.33%;
+    font-size: 28px;
+}
+.topPage .optionTheme{
+    transition: 2s;
+    font-size: 15px;
+}
+.keyboard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.keyboard button{
+    cursor: pointer;
+    padding: 7px; 
+    min-width: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ddd;
+    font-size: 15px;
+    transition: .2s;
+}
+@media (max-width: 565px) {
+    .keyboard button{
+        padding: 5px;
+        min-width: 15px;
+    }
+}
+.keyboard button:hover{
+    background-color: rgb(173, 173, 173);
+    color: rgb(216, 216, 216);
+} 
+.enter{
+    margin-left: 15px;
+}
+.deleteLetter{
+    transform-style: preserve-3d;
+    transform: rotate3d(0,0,7, 180deg);
+    margin-left: 15px;
+}
+.theme{
+    cursor: pointer;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.theme input:hover{
+    cursor: pointer;
+}
+.chooseTheme{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #ddd;
+}
+.chooseTheme::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    background-color: rgb(175, 175, 175);
+    width: 25px;
+    height: 25px;
+}
+.divHowPlay{
+    width: 33.33%;
+    text-align: right;
+}
+.howPlay{
+    cursor: pointer;
+    padding: 7px;
+    min-width: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: #fff;
+    transition: .2s;
+}
+.howPlay:hover{
+    background-color: rgb(80, 80, 80);
+}
+.attempts .row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.attempts .row .letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(143, 143, 143);
+    color: rgb(99, 98, 98);
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: rgb(245, 245, 245);
+    color: transparent;
+    text-shadow: 0 0 0 gray;
+    transition: .5s;
+}
+.attempts .row .letter:focus{
+    border-bottom: 5px solid #000;
+    transition: 0s;
+}
+.attempts .row .letterDark{
+    border-color: #fff;
+}
+.attempts .row .letterWhite{
+    border-color: #000;
+}
+.howToPlay{
+    overflow: auto;
+    width: 60%;
+    height: 60vh;
+    position: absolute;
+    top: 7.4%;
+    display: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(15,15,15,.95);
+    color: #fff;
+}
+hr{
+    margin-top: 15px;
+}
+.removeTutorial span{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    text-align: right;
+}
+.removeTutorial span:hover{
+    color: #f00;
+}
+.dispBlock{
+    display: block;
+}
+
+.tutorial{
+    padding: 15px;
+    font-size: 18px;
+}
+.tutorial .wordExample{
+    justify-content: center;
+    display: flex;
+}
+.tutorial .wordExample div{
+    border-radius: 5px;
+    background-color: rgb(61, 61, 61);
+    width: 25px;
+    height: 25px;
+    margin: 25px 7px 35px 0;
+    text-align: center;
+    border: 1px solid rgb(143, 143, 143);
+}
+.green, .yellow, .black{
+    border-radius: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid rgb(143, 143, 143);
+    color: rgb(187, 187, 187);
+}
+.tutorial .wordExample .green, .green{
+    background-color: #0f0;
+}
+.tutorial .wordExample .yellow, .yellow{
+    background-color: #ff0;
+}
+.tutorial .wordExample .black, .black{
+    background-color: #000;
+}
+
+.endgame, .gameOver{
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    border-radius: 15px;
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(15,15,15,.95);
+}
+.endgame h2{
+    font-size: 30px;
+}
+.endgame p::after{
+    content: '';
+    color: rgb(87, 212, 87);
+    font-size: 20px;
+    animation: showWord 3s forwards;
+}
+.endgame button, .gameOver button{
+    border: 1px solid rgba(15,15,15,.95);
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    transition: .2s;
+    background-color: rgb(173, 173, 173);
+    cursor: pointer;
+}
+.endgame button:hover, .gameOver button:hover{
+    border-color: #fff;
+}
+.paragError{
+    display: none;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: rgba(255,0,0,.5);
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+}
+.gameOver{
+    display: none;
+    text-align: center;
+}
+
+@keyframes showWord {
+    15%{
+        content: '!@#$%&*';
+    }30%{
+        content: '%#*@-("';
+    }40%{
+        content: 's*"!%@/';
+    }50%{
+        content: 'se@*)=&';
+    }60%{
+        content: 'sec&%*#';
+    }75%{
+        content: 'secr!&(';
+    }90%{
+        content: 'secre@#';
+    }95%{
+        content: 'secret*';
+    }100%{
+        content: 'secreta';
+    }
+}
+.word{
+    color: rgb(87, 212, 87);
+}
+
+@media (max-width: 400px){
+    .keyboard{
+        width: 100vw;
+    }
+    .attempts .row .letter{
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+    .topPage{
+        flex-direction: column;
+    }
+    .topPage div, .topPage h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+}
