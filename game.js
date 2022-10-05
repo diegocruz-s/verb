@@ -1,6 +1,4 @@
-//const words = Words;
 
-// para verbos
 const words = Verbs;
 let endGame = false;
 let word;

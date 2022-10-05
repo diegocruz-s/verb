@@ -47,12 +47,7 @@
     font-size: 15px;
     transition: .2s;
 }
-@media (max-width: 565px) {
-    .keyboard button{
-        padding: 5px;
-        min-width: 15px;
-    }
-}
+
 .keyboard button:hover{
     background-color: rgb(173, 173, 173);
     color: rgb(216, 216, 216);
@@ -277,7 +272,12 @@ hr{
 .word{
     color: rgb(87, 212, 87);
 }
-
+@media (max-width: 565px) {
+    .keyboard button{
+        padding: .3em;
+        min-width: 1.2em;
+    }
+}
 @media (max-width: 400px){
     .keyboard{
         width: 100vw;
@@ -294,6 +294,11 @@ hr{
         text-align: center;
         margin-bottom: 10px;
     }
-
+    .theme{
+        justify-content: space-between;
+    }
+    .keyboard button{
+        min-width: 1.3em;
+    }
 
 }
