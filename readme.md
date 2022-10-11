@@ -16,7 +16,7 @@
 <hr />
 <br />
 <a>
-    <video height="400em" src="./assets/verboex.mp4" controls />
+    <img height="400em" src="./assets/verboex.gif" />
 </a>
 <br />
 <img height="400em" src="./assets/howplay.png" alt="Tela como jogar" />
