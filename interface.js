@@ -102,7 +102,6 @@ function submitWord(){
         }
     })
     .catch((err)=>{
-        console.log(err.msg);
         $paragError.textContent = err.msg;
         $paragError.style.display = 'block';
     });

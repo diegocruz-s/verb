@@ -6,7 +6,6 @@ $optionsTheme.forEach((optionTheme)=>{
     optionTheme.addEventListener('click', ()=>{
         
         theme = Number(optionTheme.classList[1].replace(/[A-z]/, ''));
-        console.log(theme)
         changeTheme(theme);
     })
 

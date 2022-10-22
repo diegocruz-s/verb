@@ -13,7 +13,6 @@ const game = {
         const drawNumber = Math.floor(Math.random() * rangeWord);
 
         word = words[drawNumber].text.toUpperCase();
-        console.log(word);
         return;
     },
 
@@ -102,7 +101,6 @@ const game = {
         endGame = false;
         this.drawWord();
         colorLetter = [];
-        console.log(word);
     },
 
 }
